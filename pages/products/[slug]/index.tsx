@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import Link from "next/link"
 
 import { ArrowLeftIcon } from "@heroicons/react/solid";
 import NavBar from "../../../components/general/Navbar";
@@ -50,10 +51,12 @@ const Details: NextPage = () => {
         <div className="max-w-7xl mx-auto sm:px-4 xl:px-0">
           <span className="sr-only">Heading</span>
           <div className="bg-blue-800 font-medium text-white px-2 py-1.5 sm:rounded-lg shadow flex justify-between items-center">
-            <a href="/products" className="cursor-pointer hover:text-gray-200">
+            <Link href="/products">
+              <a  className="cursor-pointer hover:text-gray-200">
               <span aria-hidden="true">&nbsp; &larr; </span>
               Volver
             </a>
+            </Link>
             <span className="text-lg font-medium">{slug}</span>
           </div>
           <span className="sr-only">Body</span>

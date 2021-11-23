@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link"
 import axios from "axios";
 
 import { useState, useEffect } from "react";
@@ -59,13 +60,13 @@ const LogIn: NextPage = () => {
       </Head>
       <main className="py-20 bg-gray-50 flex flex-col justify-center sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md flex items-center justify-center">
-          <a href="/iniciar-sesion">
+          <Link href="/iniciar-sesion">
             <img
               className="h-16 w-auto cursor-pointer mx-auto"
               src="/wagentekk.svg"
               alt="Wagentekk Logo"
             />
-          </a>
+          </Link>
           <span className="text-blue-700 py-1 px-3 ml-3 rounded-md bg-blue-50">
             Catalogue
           </span>
