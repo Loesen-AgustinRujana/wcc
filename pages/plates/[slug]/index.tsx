@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 
 import { ArrowLeftIcon } from "@heroicons/react/solid";
 import NavBar from "../../../components/general/Navbar";
+import Footer from "../../../components/general/Footer";
 import axios from "axios";
 import { useEffect } from "react";
 import UseCookie from "../../../hooks/useCookie";
