@@ -37,7 +37,7 @@ const Details: NextPage = () => {
         .catch((err) => console.log(err));
     };
 
-    if (accessToken !== '0')  verify();
+    if (accessToken !== '0') verify();
     else window.location.href = '/iniciar-sesion';
   }, []);
 

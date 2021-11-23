@@ -27,7 +27,7 @@ const LogIn: NextPage = () => {
         .catch((err) => console.log(err));
     };
 
-    if (accessToken !== "0") return verify();
+    if (accessToken !== "0") verify();
   }, []);
 
   const handleSubmit = async (e) => {
