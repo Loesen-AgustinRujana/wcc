@@ -23,7 +23,7 @@ const Details: NextPage = () => {
   useEffect(() => {
     const verify = async () => {
       await axios
-        .get('http://127.0.0.1:8002/users/auth', {
+        .get('https://api.users.wagentekk.com/users/auth', {
           headers: {
             authorization: accessToken,
           },
@@ -36,8 +36,8 @@ const Details: NextPage = () => {
         .catch((err) => console.log(err));
     };
 
-    if (accessToken !== '0') return verify();
-    window.location.href = '/iniciar-sesion';
+    if (accessToken !== '0')  verify();
+    else window.location.href = '/iniciar-sesion';
   }, []);
 
   const { slug } = router.query;

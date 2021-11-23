@@ -54,7 +54,7 @@ const Table: FunctionComponent<Props> = ({
     //const admin = JSON.parse(localStorage.getItem('admin'));
     axios({
       method: "get",
-      url: `${"http://127.0.0.1:8002"}/products?page=${page - 1}?${query}`,
+      url: `${"http://api.catalogue.wagentekk.com"}/products?page=${page - 1}?${query}`,
       // headers: {
       //   Authorization: `Bearer ${accessToken}`,
       // },
@@ -73,7 +73,7 @@ const Table: FunctionComponent<Props> = ({
     //const admin = JSON.parse(localStorage.getItem('admin'));
     axios({
       method: "get",
-      url: `${"http://127.0.0.1:8002"}/products?page=${page + 1}`,
+      url: `${"http://api.catalogue.wagentekk.com"}/products?page=${page + 1}`,
       // headers: {
       //   Authorization: `Bearer ${accessToken}`,
       // },

@@ -27,7 +27,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     const verify = async () => {
       await axios
-        .get('http://127.0.0.1:8002/users/auth', {
+        .get('https://api.users.wagentekk.com/users/auth', {
           headers: {
             authorization: accessToken,
           },
@@ -40,8 +40,8 @@ const Home: NextPage = () => {
         .catch((err) => console.log(err));
     };
 
-    if (accessToken !== '0') return verify();
-    window.location.href = '/iniciar-sesion';
+    if (accessToken !== '0')  verify();
+    else window.location.href = '/iniciar-sesion';
   }, []);
 
   //UseEffect
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
       //const admin = JSON.parse(localStorage.getItem('admin'));
       axios({
         method: "get",
-        url: `${"http://127.0.0.1:8002"}/plates?${query}`,
+        url: `${"http://api.catalogue.wagentekk.com"}/plates?${query}`,
         // headers: {
         //   Authorization: `Bearer ${accessToken}`,
         // },
