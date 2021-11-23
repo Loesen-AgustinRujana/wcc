@@ -1,7 +1,7 @@
 import React from "react";
 import router from "next/router";
 
-const Cards = ({ positions, icons }) => {
+const Cards = ({ positions, icons } : any) => {
   const refreshFilters = () => {
     return router.reload();
   };
