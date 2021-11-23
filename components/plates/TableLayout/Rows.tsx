@@ -1,7 +1,7 @@
 import React from "react";
 import router from "next/router";
 
-const Rows = ({ positions, icons } : any) => {
+const Rows = ({ positions, icons }: any) => {
   const refreshFilters = () => {
     return router.reload();
   };
@@ -24,7 +24,7 @@ const Rows = ({ positions, icons } : any) => {
           </div>
 
           {positions.length !== 0 &&
-            positions.map((position, i) => (
+            positions.map((position: any, i:number) => (
               <a
                 key={i}
                 className="block hover:bg-gray-50 cursor-pointer"

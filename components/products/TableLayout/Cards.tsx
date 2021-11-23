@@ -9,7 +9,7 @@ const Cards = ({ positions, icons } : any) => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 justify-between">
       {positions.length !== 0 &&
-        positions.map((position, i) => {
+        positions.map((position: any, i:number) => {
           return (
             <div
               className="flex bg-white hover:bg-gray-50 shadow-sm border-t cursor-pointer w-full"
