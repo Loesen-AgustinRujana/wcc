@@ -69,6 +69,7 @@ const NavBar: NextComponentType = () => {
                           <a
                             className="text-lg py-1 pl-2 font-medium text-gray-900"
                             href={item.href}
+                            key={itemIdx}
                           >
                             {item.name}
                           </a>
@@ -98,7 +99,7 @@ const NavBar: NextComponentType = () => {
 
         <ul className="gap-x-8 mr-8 hidden md:flex">
           {navigation.map((item, itemIdx) => (
-            <li className="text-sm text-gray-600 hover:text-gray-900">
+            <li className="text-sm text-gray-600 hover:text-gray-900" key={itemIdx}>
               <a href={item.href}>{item.name}</a>
             </li>
           ))}
